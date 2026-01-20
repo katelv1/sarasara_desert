@@ -128,6 +128,7 @@
 プロフィールページ
 ========================================= */
     .profile-picture {
+        position: relative;
         text-align: center;
         margin-bottom: 30px;
         background-color: #000;
@@ -139,7 +140,7 @@
         height: auto;
         display: block;
         margin: 0 auto;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        box-shadow: 0 4px 8px #e67e22;
     }
     @media screen and (min-width: 601px) {
         .profile-picture img { max-width: 600px; }
@@ -166,12 +167,12 @@
     }
 
     .member-list-con dt {
-        background-color: #222;
+        background-color: #e67e22;
         color: #fff;
         padding: 10px;
         text-align: center;
         font-weight: normal;
-        border-bottom: 1px solid #555;
+        border-bottom: 1px solid #ffffff;
         grid-column: 1;
         display: flex; align-items: center; justify-content: center;
     }
@@ -190,6 +191,25 @@
     @media screen and (max-width: 600px) {
         .member-list { flex-direction: column; }
         .member-list-con { width: 100%; margin-bottom: 20px; }
+    }
+
+    /* 引用テキストの配置 */
+    .img-cite {
+        position: absolute; /* 親要素に対して絶対配置 */
+        bottom: 5px;        /* 下から5pxの位置 */
+        right: 10px;        /* 右から10pxの位置 */
+        margin: 0;
+        font-size: 12px;
+        color: #888;        /* 文字色（グレー） */
+    }
+
+    .img-cite a {
+        color: #ccc;        /* リンクの色（白っぽいグレー） */
+        text-decoration: none;
+    }
+
+    .img-cite a:hover {
+        text-decoration: underline;
     }
 
 /* =========================================
