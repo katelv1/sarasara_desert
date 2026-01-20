@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     
-    // ▼▼▼ index.html のニュース更新機能 ▼▼▼
+    //index.html のニュース更新
     const newsListElement = document.querySelector('.news-list');
     
-    // ページ内に「.news-list」がある場合だけ実行（トップページ用）
+    // ページ内に「.news-list」がある場合だけ実行
     if (newsListElement) {
         fetch('csv/schedule.csv')
             .then(response => {
@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 // CSVを行ごとに分割
                 let rows = data.trim().split('\n');
                 
-                // 新しい日付順にするために逆転させる
+                // 新しい日付順にするために逆転
                 rows.reverse();
 
-                // 既存のハードコードされたニュースをクリア
+                // 既存のニュースをクリア
                 newsListElement.innerHTML = '';
 
                 let htmlContent = '';
@@ -29,9 +29,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
                     const date = cols[0];   // 日付
                     const title = cols[2];  // タイトル
-                    const status = cols[3].trim(); // ステータス（終了など）
+                    const status = cols[3].trim(); // ステータス
 
-                    // 条件：「終了」となっているものだけを表示
+                    //　status=終了となっているものだけを表示
                     if (status === '終了') {
                         htmlContent += `
                             <dt>${date}</dt>
