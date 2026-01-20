@@ -1,342 +1,334 @@
-/* 全体設定 */
-body {
-    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
-    margin: 0;
-    background-color: #fdfcf0; /* 砂漠っぽい薄いベージュ */
-    color: #333;
-    line-height: 1.6;
-}
+/* =========================================
+   全体設定
+   ========================================= */
+    body {
+        font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+        margin: 0;
+        background-color: #fdfcf0; /* 砂漠っぽい薄いベージュ */
+        color: #333;
+        line-height: 1.6;
+    }
 
-/* レイアウト */
-.wrapper {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+    .wrapper {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
 
-header {
-    background-color: #e67e22; /* 砂漠の夕日イメージのオレンジ */
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
+/* =========================================
+ヘッダー・ナビゲーション
+========================================= */
+    header {
+        background-color: #e67e22; /* テーマカラー：オレンジ */
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
 
-h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
+    h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
 
-/* ナビゲーション */
-nav {
-    background-color: #333;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    width: 100%;
-}
+    /* ナビゲーション（上部固定） */
+    nav {
+        background-color: #333;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+    }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* 横並びメニュー */
-    flex-wrap: wrap;
-    justify-content: center;
-}
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-nav li {
-    margin: 0;
-}
+    nav li {
+        margin: 0;
+    }
 
-nav a {
-    display: block;
-    padding: 15px 20px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
+    nav a {
+        display: block;
+        padding: 15px 20px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
-nav a:hover {
-    background-color: #d35400;
-}
+    nav a:hover {
+        background-color: #d35400;
+    }
 
-/* コンテンツエリア */
-.container {
-    padding: 20px;
-}
+/* =========================================
+コンテンツ共通
+========================================= */
+    .container {
+        padding: 20px;
+    }
 
-h2 {
-    border-left: 5px solid #e67e22;
-    padding-left: 10px;
-    margin-top: 30px;
-}
+    h2 {
+        border-left: 5px solid #e67e22;
+        padding-left: 10px;
+        margin-top: 30px;
+    }
 
-/* ニュースリスト */
-.news-list dt {
-    font-weight: bold;
-    color: #e67e22;
-    margin-top: 10px;
-}
-.news-list dd {
-    margin-left: 0;
-    margin-bottom: 10px;
-    border-bottom: 1px dotted #ccc;
-    padding-bottom: 5px;
-}
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: #aaa;
+    }
 
-/* 本日のひとことエリア（JS用） */
-.todays-word {
-    background-color: #fff3e0;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-    border: 2px solid #e67e22;
-}
+/* =========================================
+トップページ（ニュース）
+========================================= */
+    .news-list dt {
+        font-weight: bold;
+        color: #e67e22;
+        margin-top: 10px;
+    }
+    .news-list dd {
+        margin-left: 0;
+        margin-bottom: 10px;
+        border-bottom: 1px dotted #ccc;
+        padding-bottom: 5px;
+    }
 
-#word-display {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #d35400;
-}
+    .todays-word {
+        background-color: #fff3e0;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        border: 2px solid #e67e22;
+    }
 
-button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
+    #word-display {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #d35400;
+    }
 
-button:hover {
-    opacity: 0.8;
-}
+    button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    button:hover { opacity: 0.8; }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #aaa;
-}
+/* =========================================
+プロフィールページ
+========================================= */
+    .profile-picture {
+        text-align: center;
+        margin-bottom: 30px;
+        background-color: #000;
+        padding: 10px;
+    }
 
-/* 全体を囲むコンテナ：2つのプロフィールを横並びにする */
-.member-list {
-    display: flex;
-    justify-content: space-between; /* 左右に配置 */
-    gap: 20px; /* 2つの表の間隔 */
-    max-width: 900px; /* 必要に応じて調整 */
-    margin: 0 auto;
-}
+    .profile-picture img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    @media screen and (min-width: 601px) {
+        .profile-picture img { max-width: 600px; }
+    }
 
-/* 個別のプロフィールブロックの幅 */
-.member-list-con {
-    width: 48%; /* 画面の約半分ずつ使う */
-}
-
-/* dlタグをグリッド（表）レイアウトにする設定 */
-.member-list-con dl {
-    display: grid;
-    grid-template-columns: 100px 1fr; /* 左列(項目名)は100px固定、右列は残り全部 */
-    margin: 0;
-    border-top: 1px solid #ccc; /* 全体の上線（お好みで） */
-    border-right: 1px solid #ccc; /* 全体の右線 */
-    border-left: 1px solid #ccc; /* 全体の左線 */
-}
-
-/* 項目名（左側：黒い背景） */
-.member-list-con dt {
-    background-color: #222; /* 黒っぽい背景色 */
-    color: #fff; /* 白文字 */
-    padding: 10px;
-    text-align: center; /* 中央揃え */
-    font-weight: normal;
-    border-bottom: 1px solid #555; /* 下線（少し薄いグレー） */
-    grid-column: 1; /* 1列目に配置 */
-    
-    /* 文字を上下中央にする */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* 内容（右側：白い背景） */
-.member-list-con dd {
-    background-color: #fff;
-    margin: 0; /* ブラウザ標準の余白を削除 */
-    padding: 10px 15px;
-    border-bottom: 1px solid #ccc; /* 下線 */
-    grid-column: 2; /* 2列目に配置 */
-    color: #333;
-    
-    /* 文字を上下中央にする */
-    display: flex;
-    align-items: center;
-}
-
-/* スマホ対応：画面が狭いときは縦並びにする */
-@media screen and (max-width: 600px) {
     .member-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .member-list-con {
+        width: 48%;
+    }
+
+    .member-list-con dl {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        margin: 0;
+        border: 1px solid #ccc; /* 枠線をまとめて指定 */
+        border-bottom: none;    /* 下線はdd/dtで引くので削除 */
+    }
+
+    .member-list-con dt {
+        background-color: #222;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        font-weight: normal;
+        border-bottom: 1px solid #555;
+        grid-column: 1;
+        display: flex; align-items: center; justify-content: center;
+    }
+
+    .member-list-con dd {
+        background-color: #fff;
+        margin: 0;
+        padding: 10px 15px;
+        border-bottom: 1px solid #ccc;
+        grid-column: 2;
+        color: #333;
+        display: flex; align-items: center;
+    }
+
+    /* スマホ対応 */
+    @media screen and (max-width: 600px) {
+        .member-list { flex-direction: column; }
+        .member-list-con { width: 100%; margin-bottom: 20px; }
+    }
+
+/* =========================================
+   スケジュールページ（スクロール対応テーブル）
+   ========================================= */
+
+    /* ① テーブル全体枠（角丸の設定） */
+    .schedule-table {
+        width: 100%;
+        border-collapse: separate; /* 角丸用 */
+        border-spacing: 0;
+        
+        border: 1px solid #ddd;
+        border-radius: 12px;       /* 角丸 */
+        overflow: hidden;          /* はみ出しカット */
+        background-color: #fff;
+        
+        margin-bottom: 30px;
+        display: flex;             /* 中身をブロックとして扱う準備 */
         flex-direction: column;
     }
-    .member-list-con {
+
+    /* ② ヘッダー部分（固定） */
+    #schedule-title {
+        display: table;
         width: 100%;
-        margin-bottom: 20px;
+        table-layout: fixed;
+        background-color: #e67e22;
+        color: #fff;
     }
-}
 
-/* 写真エリアの調整 */
-.profile-picture {
-    text-align: center; /* 写真を中央寄せにする */
-    margin-bottom: 30px; /* 下の表との間隔 */
-    background-color: #000; /* 写真の背景を黒にする（画像の余白対策） */
-    padding: 10px; /* 写真の周りに少し余白を作る */
-}
+    /* ③ リスト部分（スクロール） */
+    #schedule-list {
+        display: block;
+        max-height: 250px;       /* ★ここで表示行数を制限 */
+        overflow-y: auto;        /* 縦スクロール */
+        width: 100%;
+        background-color: #fff;
+    }
 
-.profile-picture img {
-    max-width: 100%; /* 画面幅からはみ出さないようにする */
-    height: auto;    /* 高さは自動調整 */
-    display: block;  /* ブロック要素として扱う */
-    margin: 0 auto;  /* 中央配置の補正 */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* 少し影をつける */
-}
+    /* リスト内の行もテーブルとして振る舞わせる */
+    #schedule-list tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
 
-/* スマホなどで見た時に写真が大きすぎないように制限するなら以下を追加 */
-.profile-picture img {
-    max-width: 600px; /* 最大幅を600pxに制限 */
-    width: 100%;
-}
+    /* ④ 列幅の比率設定（ヘッダー・リスト共通） */
+    /* 1列目：30% */
+    .schedule-table th:nth-child(1),
+    .schedule-table td:nth-child(1) {
+        width: 30%;
+        border-right: 1px solid #ddd;
+    }
+    /* 2列目：70% */
+    .schedule-table th:nth-child(2),
+    .schedule-table td:nth-child(2) {
+        width: 70%;
+    }
 
-/* スケジュールページ専用のCSS */
-.schedule-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 30px;
-    background-color: #fff;
-}
+    /* ⑤ セルの装飾 */
+    .schedule-table th,
+    .schedule-table td {
+        padding: 15px;
+        text-align: left;
+    }
+    .schedule-table td {
+        border-bottom: 1px solid #eee;
+    }
 
-.schedule-table th, 
-.schedule-table td {
-    border: 1px solid #ddd;
-    padding: 15px;
-    text-align: left;
-}
+    /* タグや文字色 */
+    .schedule-tag {
+        display: inline-block;
+        background-color: #333;
+        color: #fff;
+        font-size: 0.8em;
+        padding: 3px 8px;
+        border-radius: 4px;
+        margin-right: 5px;
+    }
+    .status-finished {
+        color: #999;
+        font-size: 0.9em;
+    }
+    .link-btn {
+        color: #d35400; 
+        font-weight: bold;
+    }
 
-.schedule-table th {
-    background-color: #e67e22; /* テーマカラーのオレンジ */
-    color: #fff;
-    width: 20%;
-    text-align: center;
-}
+/* =========================================
+   お問い合わせ / 連絡先ページ
+   ========================================= */
+    .contact-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-top: 20px;
+    }
 
-.schedule-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
+    .contact-info {
+        flex: 1;
+        min-width: 300px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+    }
 
-.schedule-tag {
-    display: inline-block;
-    background-color: #333;
-    color: #fff;
-    font-size: 0.8em;
-    padding: 3px 8px;
-    border-radius: 4px;
-    margin-right: 5px;
-}
+    .contact-info h3 {
+        border-bottom: 2px solid #e67e22;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        font-size: 1.2em;
+    }
 
-.status-finished {
-    color: #999;
-    font-size: 0.9em;
-}.schedule-table {
-    width: 100%;
-    /* ▼▼▼ 角丸にするための重要な設定 ▼▼▼ */
-    border-collapse: separate; /* collapseだと角丸が効かないため変更 */
-    border-spacing: 0;         /* セルの隙間をなくす */
-    border-radius: 12px;       /* 角の丸み（数値で調整） */
-    overflow: hidden;          /* はみ出した角をカット */
-    border: 1px solid #ddd;    /* 表全体の外枠 */
-    /* ▲▲▲ 角丸設定ここまで ▲▲▲ */
-    
-    margin-bottom: 30px;
-    background-color: #fff;
-    table-layout: fixed;       /* 幅の指定を強制的に効かせる */
-}
+    .contact-info address {
+        font-style: normal;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        font-size: 1.1em;
+    }
 
-/* 1列目（日付）：全体の約33%（1の比率） */
-.schedule-table th:nth-child(1),
-.schedule-table td:nth-child(1) {
-    width: 33%; 
-    border-right: 1px solid #ddd; /* 縦線を追加 */
-}
+    .email-link {
+        color: #d35400;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.2em;
+    }
 
-/* 2列目（詳細）：残り（2の比率） */
-.schedule-table th:nth-child(2),
-.schedule-table td:nth-child(2) {
-    width: 67%;
-}
-
-/* セル共通のデザイン */
-.schedule-table th,
-.schedule-table td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd; /* 内側の横線 */
-}
-
-/* ヘッダーのデザイン */
-.schedule-table thead th {
-    background-color: #e67e22; /* テーマカラー */
-    color: #fff;
-    text-align: center;
-    border-bottom: 1px solid #d35400;
-}
-
-/* 最後の行の下線を消す（外枠と重なるのを防ぐため） */
-.schedule-table tr:last-child th,
-.schedule-table tr:last-child td {
-    border-bottom: none;
-}
-
-/* ▼▼▼ スクロール用の設定を追加・変更 ▼▼▼ */
-
-/* テーブルを囲む枠のデザイン */
-#table-container {
-    width: 100%;
-    overflow-y: auto; /* 縦方向にスクロールバーを出す設定 */
-    border: 1px solid #ddd; /* 枠線 */
-    border-radius: 12px; /* 角丸 */
-    background-color: #fff;
-    margin-bottom: 30px;
-    
-    /* 初期状態の高さ（JavaScriptで上書きされますが念のため） */
-    max-height: 400px; 
-}
-
-/* 以前のテーブル設定を少し調整 */
-.schedule-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    /* テーブル自体の枠線や角丸はコンテナ側に移したので削除または調整 */
-    border: none; 
-    border-radius: 0;
-    margin-bottom: 0; /* 下の余白はコンテナで取るので0に */
-}
-
-/* ヘッダーを固定する設定（Sticky） */
-.schedule-table thead th {
-    position: sticky; /* スクロールしても位置を固定 */
-    top: 0;           /* 一番上に張り付ける */
-    z-index: 1;       /* 文字より手前に表示 */
-    background-color: #e67e22; /* 背景色（これがないと文字が透ける） */
-    
-    /* 以前のデザイン */
-    color: #fff;
-    text-align: center;
-    padding: 15px;
-    border-bottom: 1px solid #d35400;
-}
-
-.link-btn {
-    color: #d35400; 
-    font-weight: bold;
-}
+    .sns-list { list-style: none; padding: 0; }
+    .sns-list li { margin-bottom: 10px; }
+    .sns-list a {
+        display: block;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 4px;
+        text-align: center;
+        transition: opacity 0.3s;
+    }
+    .sns-list a:hover { opacity: 0.8; }
