@@ -241,7 +241,7 @@
         color: #fff;
     }
 
-    /* ③ リスト部分（スクロール） */
+    /* リスト部分（スクロール） */
     #schedule-list {
         display: block;
         max-height: 350px;       /*表示桁数の制限*/
