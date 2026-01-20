@@ -263,6 +263,7 @@
     .schedule-table td:nth-child(1) {
         width: 30%;
         border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
     }
     /* 2列目：70% */
     .schedule-table th:nth-child(2),
