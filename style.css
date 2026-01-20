@@ -1,6 +1,6 @@
 /* =========================================
-   全体設定
-   ========================================= */
+全体設定
+========================================= */
     body {
         font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
         margin: 0;
@@ -163,7 +163,7 @@
         grid-template-columns: 100px 1fr;
         margin: 0;
         border: 1px solid #ccc; /* 枠線をまとめて指定 */
-        border-bottom: none;    /* 下線はdd/dtで引くので削除 */
+        border-bottom: none;
     }
 
     .member-list-con dt {
@@ -196,8 +196,8 @@
     /* 引用テキストの配置 */
     .img-cite {
         position: absolute; /* 親要素に対して絶対配置 */
-        bottom: 5px;        /* 下から5pxの位置 */
-        right: 10px;        /* 右から10pxの位置 */
+        bottom: 5px;   
+        right: 10px;        
         margin: 0;
         font-size: 12px;
         color: #888;        /* 文字色（グレー） */
@@ -213,10 +213,10 @@
     }
 
 /* =========================================
-   スケジュールページ（スクロール対応テーブル）
-   ========================================= */
+スケジュールページ（スクロール対応テーブル）
+========================================= */
 
-    /* ① テーブル全体枠（角丸の設定） */
+    /*テーブル全体枠（角丸の設定） */
     .schedule-table {
         width: 100%;
         border-collapse: separate; /* 角丸用 */
@@ -232,7 +232,7 @@
         flex-direction: column;
     }
 
-    /* ② ヘッダー部分（固定） */
+    /*ヘッダー部分（固定） */
     #schedule-title {
         display: table;
         width: 100%;
@@ -244,7 +244,7 @@
     /* ③ リスト部分（スクロール） */
     #schedule-list {
         display: block;
-        max-height: 250px;       /* ★ここで表示行数を制限 */
+        max-height: 350px;       /*表示桁数の制限*/
         overflow-y: auto;        /* 縦スクロール */
         width: 100%;
         background-color: #fff;
@@ -257,7 +257,7 @@
         table-layout: fixed;
     }
 
-    /* ④ 列幅の比率設定（ヘッダー・リスト共通） */
+    /* 列幅の比率設定（ヘッダー・リスト共通） */
     /* 1列目：30% */
     .schedule-table th:nth-child(1),
     .schedule-table td:nth-child(1) {
@@ -271,7 +271,7 @@
         width: 70%;
     }
 
-    /* ⑤ セルの装飾 */
+    /*セルの装飾 */
     .schedule-table th,
     .schedule-table td {
         padding: 15px;
@@ -301,8 +301,8 @@
     }
 
 /* =========================================
-   お問い合わせ / 連絡先ページ
-   ========================================= */
+お問い合わせ / 連絡先ページ
+========================================= */
     .contact-wrapper {
         display: flex;
         flex-wrap: wrap;
