@@ -31,6 +31,10 @@ h1 {
 /* ナビゲーション */
 nav {
     background-color: #333;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    width: 100%;
 }
 
 nav ul {
@@ -330,4 +334,9 @@ footer {
     text-align: center;
     padding: 15px;
     border-bottom: 1px solid #d35400;
+}
+
+.link-btn {
+    color: #d35400; 
+    font-weight: bold;
 }
